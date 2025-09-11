@@ -1,5 +1,5 @@
 ### Exercise 1
-The LOESS function can be found in `func.py` and the script executing the function and displaying the results can be found in `LOESS_plot.py`. The plot is stored in `LOESS_fit.png`.
+The LOESS function can be found in `func.py` and the script executing the function and displaying the results can be found in `LOESS_script.py`. The plot is stored in `LOESS_fit.png`.
 
 #### Results: <br>
 MORT predictions for POOR = 10%, 18%, 25% : [ 893.41  957.36 1014.35] <br>

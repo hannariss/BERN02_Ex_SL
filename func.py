@@ -1,3 +1,6 @@
+# Author: Johanna Rissbacher
+# Date: 11/09/2025
+
 import math
 import numpy as np
 from scipy.optimize import minimize

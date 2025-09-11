@@ -5,14 +5,14 @@ from scipy.optimize import minimize
 def LOESS(x, y, k, x_0):
     """
     Args:
-        x (_type_): vector of obs of the predictor
-        y (_type_): vector of obs of the response variable
-        k (_type_): number of neighboring points
-        x_0 (_type_): vector of values for which a prediction is going to be made
+        x (pandas.series, array): vector of obs of the predictor
+        y (pandas.series, array): vector of obs of the response variable
+        k (int): number of neighboring points
+        x_0 (array): vector of values for which a prediction is going to be made
     
     Returns:
-        pred (_type_): vector of predicted values
-        se (_type_): vector of standard deviations of the expected value of each predicted value
+        pred (array): vector of predicted values
+        se (array): vector of standard deviations of the expected value of each predicted value
     """
 
     distances = np.zeros(len(x))
@@ -20,9 +20,6 @@ def LOESS(x, y, k, x_0):
     se = np.zeros(len(x_0))
     for i in range(len(x_0)):
         # select the k nearest points to x_0[i]
-        #distances[i] = abs(x - x_0[i])
-        # for j in range(len(x)):
-        #     distances[j] = abs(x[j], x_0[i])
         distances[:] = np.abs(x - x_0[i])
         idx = np.argsort(distances)[:k]
         x_k = x[idx]
@@ -49,6 +46,4 @@ def LOESS(x, y, k, x_0):
         n = len(y)
         standard_deviation = np.sqrt(var * (1/n + (x_0[i] - np.mean(x_k))**2 / np.sum((x - np.mean(x_k))**2)))
         se[i] = standard_deviation
-  
-
     return pred, se

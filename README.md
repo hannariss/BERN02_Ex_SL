@@ -8,6 +8,7 @@ Standard deviations: [8.27 6.44 8.96]
 
 ### Exercise 2
 When running the script `possion_reg.py` the plot showing the possion regression on the provided bird cound data will be created (`possion_reg_plot.png`). <br>
-Additionally, 3 samples are stored in `possion_regression_predictions`.
+Additionally, three samples were created with the model and are stored in `possion_regression_predictions.csv`.
+
 
 

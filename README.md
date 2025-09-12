@@ -6,3 +6,8 @@ MORT predictions for POOR = 10%, 18%, 25% : [ 893.41  957.36 1014.35] <br>
 Standard deviations: [8.27 6.44 8.96]
 
 
+### Exercise 2
+When running the script `possion_reg.py` the plot showing the possion regression on the provided bird cound data will be created (`possion_reg_plot.png`). <br>
+Additionally, 3 samples are stored in `possion_regression_predictions`.
+
+
